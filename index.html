@@ -1,4 +1,4 @@
-<!--1. creating a fresh HTML code-->
+<!--1. CREATING FRESH BASIC HTML CODE-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pet Adoption App</title>
-<!--2. adding a css-->
+<!--2. ADDING CSS-->
     <link rel = "stylesheet" href = "./style.css"></link>
 </head>
 <body>
-<!--3. adding a "div" tag and 3 script tag-->
+<!--3. ADDING A 'DIV' TAG ALONG WITH 3 'SCRIPT' TAG-->
     <!--We will use this ("div" tag with the ID of "root") to render out our React.js code by using the DOM.
         Inside this "div" tag we write "not rendered" to notified when the React.js code that we write doesn't rendered to this "div" tag.
         But, when it does rendering the react.js code that we write, the word "not rendered" will be replaced by whatever our React.js code that we write.
@@ -20,21 +20,7 @@
     <script src = "https://unpkg.com/react@16.4.1/umd/react.development.js"></script>
     <!--second's script tag sources is the rendering method, in this case DOM-->
     <script src = "https://unpkg.com/react-dom@16.4.1/umd/react-dom.development.js"></script>
-    <!--third's script tag is the place where we can write our HTML code-->
-    <script>
-        //4. Writing your ReactJS code
-
-        //this is our first 'React Function Component' that will return a markup
-        //Component is some sort of the so-called Class that are resuable to create an instance of that Class
-        const App = () => {
-            //the div is like mimicking the self-closing tag on HTML
-            return React.createElement("div", {}, 
-                React.createElement("h1", {}, "Adopt Me !")
-            )
-        }
-        //here is the render function from te ReactDOM library that wil render our 'App' component.
-        //this guy below (React.createElement(App)), sort-of creating an 'instace' from our App 'class'.
-        ReactDOM.render(React.createElement(App), document.getElementById("root"))
-    </script>
+    <!--third's script tag is the place where we can write our JavaScript code-->
+    <script src = "./App.js"></script>
 </body>
 </html>
