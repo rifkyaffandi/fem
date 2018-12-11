@@ -1,30 +1,49 @@
-//5. Writing your second ReactJS "Reusable" Component.
+//6. USING THE "PROPS" FOR EVEN MORE USEFUL COMPONENT
 
-//Here we write our second ReactJS Component
-//This time, instead of writing one single heading element inside of a div tag, we write 3 heading element inside of a div tag
-//therefore we wrapped those 3 element into one by using the array square bracket [].
-const Pet = () => {
+/* 
+    Earlier we are using the second component to stamped-on our first component. That's great. 
+    But, how if we want to make those stamping machine (component) even more useful.
+    The answer is by using the "props".
+    Props is a shorthand for property. 
+    It's a parameter that we using in our 'funtion component' that will be passed later to that component 
+    and append with a dot "." the extension of the 'later will be use' props 'stuff'.
+*/
+
+//Here is the example
+const Pet = (props) => {
     return React.createElement("div", {}, [
-        React.createElement("h2", {}, "Luna"),
-        React.createElement("h2", {}, "Dog"),
-        React.createElement("h2", {}, "Havaneese")
+        //we use the props as a parameter above, pass that props (parameter) above
+        //to the code below and append those 'props' with dot ".", so it will be later reusable.
+        React.createElement("h2", {}, props.name),
+        React.createElement("h2", {}, props.animal),
+        React.createElement("h2", {}, props.breed)
     ])
 }
 
 const App = () => {
     return React.createElement("div", {}, [
         React.createElement("h1", {}, "Adopt Me !"),
-        //Below we created the React.createElement but by passing the "Pet" keyword from the component above, 
-        //which make the "Pet" component available in this "App" component and of course will be displayed in the screen along with the "Adopt Me !".
-        //This is the meaning of "Component" a.k.a React Class || Reusable component. It's a "React Stamp !!"
-        //----------------------------------------------//
-        //Another thing is, because we have more than one element here, 
-        //so we wraped the entire thning into one by using the bracket array notation,
-        //like we did with the previous "Pet" component
-        React.createElement(Pet),
-        React.createElement(Pet),
-        React.createElement(Pet)
+
+        //here is the usage from that props. 
+        //We put this props at the attribute place for our header tag component.
+        //seperate them with the commas, assign a value to them with a colon ":"
+        React.createElement(Pet, {
+            name : "Luna",
+            animal : "Dog",
+            breed : "Havaneese" 
+        }),
+        React.createElement(Pet, {
+            name : "Pepper",
+            animal : "Bird",
+            breed : "Cockatiel"
+        }),
+        React.createElement(Pet, {
+            name : "Doink",
+            animal : "Cat",
+            breed : "Mixed" 
+        })
     ])
 }
 
+//here, our old friend--the render function.
 ReactDOM.render(React.createElement(App), document.getElementById("root"))
