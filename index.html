@@ -22,7 +22,19 @@
     <script src = "https://unpkg.com/react-dom@16.4.1/umd/react-dom.development.js"></script>
     <!--third's script tag is the place where we can write our HTML code-->
     <script>
-        // your code 
+        //4. Writing your ReactJS code
+
+        //this is our first 'React Function Component' that will return a markup
+        //Component is some sort of the so-called Class that are resuable to create an instance of that Class
+        const App = () => {
+            //the div is like mimicking the self-closing tag on HTML
+            return React.createElement("div", {}, 
+                React.createElement("h1", {}, "Adopt Me !")
+            )
+        }
+        //here is the render function from te ReactDOM library that wil render our 'App' component.
+        //this guy below (React.createElement(App)), sort-of creating an 'instace' from our App 'class'.
+        ReactDOM.render(React.createElement(App), document.getElementById("root"))
     </script>
 </body>
 </html>
