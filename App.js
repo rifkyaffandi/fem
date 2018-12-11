@@ -1,13 +1,3 @@
-//7. FUNCTION COMPONENT VS CLASS COMPONENT
-
-const Pet = (props) => {
-    return React.createElement("div", {}, [
-        React.createElement("h2", {}, props.name),
-        React.createElement("h2", {}, props.animal),
-        React.createElement("h2", {}, props.breed)
-    ])
-}
-
 class App extends React.Component {
 
     handleTitleClick () {
@@ -36,5 +26,4 @@ class App extends React.Component {
     }
 }
 
-//here, our old friend--the render function.
 ReactDOM.render(React.createElement(App), document.getElementById("root"))
