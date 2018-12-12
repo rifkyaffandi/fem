@@ -1,0 +1,28 @@
+85a3543 7. npm, Prettier, ESLint
+    0. Install Node.js. NPM is part of this Node JS.
+    1. Initialize npm by typing npm init -y command on your terminal.
+    2. Install the formatting first then your linting via terminal using the following commands :
+        -- prettier : npm install -D prettier
+            -- Inside your script property on your package.json, add the following :
+                -- "format": "prettier --write \"src/**/*.{js, jsx, json, css }\"",
+                    -- after that type npm run format on your terminal to activate this setting
+                -- "format:check": "prettier --list-different \"src/**/*.{js, jsx, json, css }\"",
+                    -- after that type npm run format:check on your terminal to activate this setting
+            -- create a new file called .prettierrc with an empty object in it.
+            -- Install Prettier from your VSCode then go to user setting (json) then add :
+                "editor.formatOnSave": true and "prettier.requireConfig" : true.
+        -- ESLint : npm install -D eslint eslint-config-prettier && npm install -D eslint-plugin-prettier
+            -- Inside your script property on your package.json, add the following :
+                -- "lint": "eslint \"src/**/*.{js, jsx}\"",
+                    -- after that type npm run lint in your terminal to activate this setting.
+                -- Check the devDependencies wheter or not your ESLint is installed yet.
+            -- Create a new file called .eslintrc.json with (check the files)
+            -- Install ESLint from your VSCode.
+----------------------------------------------------------------------------------------------------
+a3ebb57 6. Individual File for Individual Component
+fe6cf55 5. Refactoring our first Component from Function Component to Class Component
+d028d88 4. Using the Props on the second component
+883dee5 3. Second component was created and stamped at the first component
+dd53219 2. First React Component was moved the its own file : Use files separation
+b887a00 1. First React Component was written and rendered : Write Function Component
+61dd169 0. SetUp finished, ready to write React.js code : Write Pure HTML

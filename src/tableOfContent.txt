@@ -1,8 +1,0 @@
-7. npm, Prettier, ESLint
-a3ebb57 6. Individual File for Individual Component
-fe6cf55 5. Refactoring our first Component from Function Component to Class Component
-d028d88 4. Using the Props on the second component
-883dee5 3. Second component was created and stamped at the first component
-dd53219 2. First React Component was moved the its own file : Use files separation
-b887a00 1. First React Component was written and rendered : Write Function Component
-61dd169 0. SetUp finished, ready to write React.js code : Write Pure HTML
