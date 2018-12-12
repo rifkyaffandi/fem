@@ -1,3 +1,7 @@
+import React from "react";
+import { render } from "react-dom";
+import Pet from "./Pet.js";
+
 class App extends React.Component {
   handleTitleClick() {
     return alert("you click the title");
@@ -29,4 +33,6 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+render(React.createElement(App), document.getElementById("root"));
+
+export default App;

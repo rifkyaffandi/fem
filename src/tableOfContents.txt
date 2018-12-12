@@ -1,23 +1,37 @@
+a717927 8. Parcel
+    0. Install your parcel by typing npm install -D parcel-bundler (bundler is basically a development catalyst)
+    1. go to your script property at your package.json underneath the (blah blah) add the following code  :
+        "dev" : "parcel src/index.html"
+    2. after that type npm run dev at your terminal. (it will give you the localhost:1234, and then the compiler)
+
+    after you install your parcel, now you can delete your CDN from your index.html(because now the whole thing has been take-cared by parcel)
+    Then you should type import React from 'react'; at the very top of your App.js to make sure that you can still have all of those react goodness
+    After that you should type import { render } from 'react-dom'; underneath your previous statement.
+
+
 85a3543 7. npm, Prettier, ESLint
     0. Install Node.js. NPM is part of this Node JS.
     1. Initialize npm by typing npm init -y command on your terminal.
     2. Install the formatting first then your linting via terminal using the following commands :
-        -- prettier : npm install -D prettier
+        -- prettier : npm install -D prettier (-D means that you are not installing the standard dependencies but rather the developer dependecies) 
             -- Inside your script property on your package.json, add the following :
                 -- "format": "prettier --write \"src/**/*.{js, jsx, json, css }\"",
-                    -- after that type npm run format on your terminal to activate this setting
+                    -- after that type "npm run format" on your terminal to activate this setting
                 -- "format:check": "prettier --list-different \"src/**/*.{js, jsx, json, css }\"",
-                    -- after that type npm run format:check on your terminal to activate this setting
-            -- create a new file called .prettierrc with an empty object in it.
+                    -- after that type "npm run format:check" on your terminal to activate this setting
+            -- create a new file called .prettierrc with an empty object in it. (This means that you run the recommended setting from prettier with no modification)
             -- Install Prettier from your VSCode then go to user setting (json) then add :
                 "editor.formatOnSave": true and "prettier.requireConfig" : true.
+        
         -- ESLint : npm install -D eslint eslint-config-prettier && npm install -D eslint-plugin-prettier
             -- Inside your script property on your package.json, add the following :
                 -- "lint": "eslint \"src/**/*.{js, jsx}\"",
-                    -- after that type npm run lint in your terminal to activate this setting.
+                    -- after that type "npm run lint" in your terminal to activate this setting.
                 -- Check the devDependencies wheter or not your ESLint is installed yet.
             -- Create a new file called .eslintrc.json with (check the files)
             -- Install ESLint from your VSCode.
+            npm run lint -- --debug
+  
 ----------------------------------------------------------------------------------------------------
 a3ebb57 6. Individual File for Individual Component
 fe6cf55 5. Refactoring our first Component from Function Component to Class Component
