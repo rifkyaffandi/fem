@@ -1,13 +1,15 @@
-a717927 8. Parcel
+7c8f13c 8. Parcel
     0. Install your parcel by typing npm install -D parcel-bundler (bundler is basically a development catalyst)
     1. go to your script property at your package.json underneath the (blah blah) add the following code  :
         "dev" : "parcel src/index.html"
     2. after that type npm run dev at your terminal. (it will give you the localhost:1234, and then the compiler)
 
     after you install your parcel, now you can delete your CDN from your index.html(because now the whole thing has been take-cared by parcel)
-    Then you should type import React from 'react'; at the very top of your App.js to make sure that you can still have all of those react goodness
+    Then you should type import React from 'react'; at the very top of your App.js to make sure that you can still have all of those react goodness from parcel.
     After that you should type import { render } from 'react-dom'; underneath your previous statement.
+    After that you should export and import your component at your own desired.
 
+a717927 7.1 7th revised
 
 85a3543 7. npm, Prettier, ESLint
     0. Install Node.js. NPM is part of this Node JS.
